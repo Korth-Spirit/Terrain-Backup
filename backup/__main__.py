@@ -19,16 +19,13 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 from korth_spirit import ConfigurableInstance
-from korth_spirit.configuration import (AggregateConfiguration,
-                                        JsonConfiguration)
+from korth_spirit.configuration import JsonConfiguration
 from korth_spirit.query import QueryEnum
 
 from utilities import append_to_file, on_each
 
 with ConfigurableInstance(
-    AggregateConfiguration({
-        JsonConfiguration: ("configuration.json",),
-    })
+    JsonConfiguration("configuration.json"),
 ) as bot:
     on_each(
         bot.query(QueryEnum.TERRAIN),
