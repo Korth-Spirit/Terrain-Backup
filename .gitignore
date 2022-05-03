@@ -2,3 +2,4 @@ __pycache__
 .venv
 terrain.json
 aw64.dll
+configuration.json
