@@ -30,7 +30,7 @@ def append_to_file(file_name: str, data: Union[TerrainNodeData, str]) -> None:
 
     Args:
         file_name (str): The name of the file to append to.
-        data (Union[AWObject, str]): The data to append.
+        data (Union[TerrainNodeData, str]): The data to append.
     """
     if type(data) == TerrainNodeData:
         data = json.dumps(data.__dict__)
